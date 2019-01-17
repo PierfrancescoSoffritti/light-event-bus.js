@@ -2,10 +2,12 @@
   "name": "event-bus",
   "version": "0.0.0-development",
   "description": "Event bus module for node and the browser.",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha ./tests/*_test.js",
-    "report-coverage": "nyc report --reporter=text-lcov | codecov"
+    "report-coverage": "nyc report --reporter=text-lcov | codecov",
+    "prebuild": "rimraf build",
+    "build": "babel --out-dir build src"
   },
   "author": "Pierfrancesco Soffritti <soffritti.pierfrancesco@gmail.com> (https://pierfrancescosoffritti.com/)",
   "license": "MIT",
@@ -13,20 +15,38 @@
     "uuid": "3.3.2"
   },
   "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
     "chai": "4.2.0",
     "codecov.io": "0.1.6",
     "ghooks": "2.0.4",
     "mocha": "5.2.0",
     "nyc": "13.1.0",
+    "rimraf": "2.6.3",
     "sinon": "7.2.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/PierfrancescoSoffritti/event-bus.git"
   },
+  "keywords": [
+    "eventbus",
+    "event-bus",
+    "event",
+    "bus"
+  ],
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
   "config": {
     "ghooks": {
       "pre-commit": "npm run test"
     }
+  },
+  "babel": {
+    "presets": ["es2015", "stage-2"]
   }
 }

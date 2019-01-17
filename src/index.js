@@ -1,4 +1,4 @@
-const EventBus = require('./EventBus')
+import EventBus from './EventBus'
 
 const EventBusSingleton = new EventBus()
 
