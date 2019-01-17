@@ -1,0 +1,19 @@
+{
+  "name": "event-bus",
+  "version": "1.0.0",
+  "description": "event bus module for node and the browser.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha ./tests/*_test.js"
+  },
+  "author": "Pierfrancesco Soffritti <soffritti.pierfrancesco@gmail.com> (https://pierfrancescosoffritti.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "3.3.2"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "mocha": "5.2.0",
+    "sinon": "7.2.2"
+  }
+}
