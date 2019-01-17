@@ -1,4 +1,4 @@
-const uuidv4 = require('uuid/v4');
+const uuidv4 = require('uuid/v4')
 
 function EventBus() {
     const subscriptions = { }
