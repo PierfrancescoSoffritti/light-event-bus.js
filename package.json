@@ -4,7 +4,8 @@
   "description": "Event bus module for node and the browser.",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha ./tests/*_test.js"
+    "test": "nyc --reporter=html --reporter=text mocha ./tests/*_test.js",
+    "report-coverage": "nyc report --reporter=text-lcov | codecov"
   },
   "author": "Pierfrancesco Soffritti <soffritti.pierfrancesco@gmail.com> (https://pierfrancescosoffritti.com/)",
   "license": "MIT",
@@ -13,11 +14,19 @@
   },
   "devDependencies": {
     "chai": "4.2.0",
+    "codecov.io": "0.1.6",
+    "ghooks": "2.0.4",
     "mocha": "5.2.0",
+    "nyc": "13.1.0",
     "sinon": "7.2.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/PierfrancescoSoffritti/event-bus.git"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
   }
 }
