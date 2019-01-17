@@ -1,6 +1,6 @@
-const expect = require('chai').expect
-const sinon = require('sinon')
-const EventBus = require('../src/EventBus')
+import {expect} from 'chai'
+import sinon from 'sinon'
+import EventBus from '../src/EventBus'
 
 describe('EventBus', function() {
     describe('subscribe', function() {
