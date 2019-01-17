@@ -1,7 +1,7 @@
 {
   "name": "event-bus",
-  "version": "1.0.0",
-  "description": "event bus module for node and the browser.",
+  "version": "0.0.0-development",
+  "description": "Event bus module for node and the browser.",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha ./tests/*_test.js"
@@ -15,5 +15,9 @@
     "chai": "4.2.0",
     "mocha": "5.2.0",
     "sinon": "7.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PierfrancescoSoffritti/event-bus.git"
   }
 }
