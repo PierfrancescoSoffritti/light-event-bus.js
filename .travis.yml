@@ -2,7 +2,7 @@ language: node_js
 notifications:
  email: false
 node_js:
- - iojs
+ - "node"
 before_script:
  - npm prune
 script:
