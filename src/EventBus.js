@@ -1,30 +1,25 @@
-import uuidv4 from './UuidGenerator'
+import uuidv4 from './UuidGenerator';
 
 function EventBus() {
-    const subscriptions = { }
+  const subscriptions = { };
 
-    this.subscribe = function(eventType, callback) {
-        const id = uuidv4()
+  this.subscribe = function subscribeCallbackToEvent(eventType, callback) {
+    const id = uuidv4();
+    if (!subscriptions[eventType]) subscriptions[eventType] = { }; 
+    subscriptions[eventType][id] = callback;
+    return {
+      unsubscribe: function unsub() {
+        delete subscriptions[eventType][id];
+        if (Object.keys(subscriptions[eventType]).length === 0) delete subscriptions[eventType];
+      },
+    };
+  };
 
-        if(!subscriptions[eventType])
-            subscriptions[eventType] = { }
+  this.publish = function publishEventWithArgs(eventType, arg) {
+    if (!subscriptions[eventType]) return;
 
-        subscriptions[eventType][id] = callback
-
-        return { 
-            unsubscribe: function() {
-                delete subscriptions[eventType][id]
-                if(Object.keys(subscriptions[eventType]).length === 0) delete subscriptions[eventType]
-            }
-        }
-    }
-
-    this.publish = function(eventType, arg) {
-        if(!subscriptions[eventType])
-            return
-
-        Object.keys(subscriptions[eventType]).forEach(key => subscriptions[eventType][key](arg))
-    }
+    Object.keys(subscriptions[eventType]).forEach(key => subscriptions[eventType][key](arg));
+  };
 }
 
-export default EventBus
+export default EventBus;

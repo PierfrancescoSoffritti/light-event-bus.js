@@ -1,4 +1,4 @@
-import _EventBus from './EventBus'
+import _EventBus from './EventBus';
 
-export const EventBus = _EventBus
-export const EventBusSingleton = new _EventBus()
+export const EventBus = _EventBus;
+export const EventBusSingleton = new _EventBus();

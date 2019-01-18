@@ -4,11 +4,12 @@
   "description": "Event bus module for node and the browser.",
   "main": "build/index.js",
   "scripts": {
+    "lint": "eslint src tests",
     "test": "nyc --reporter=html --reporter=text mocha ./tests/*_test.js --compilers js:@babel/register",
     "report-coverage": "nyc report --reporter=text-lcov | codecov",
     "prebuild": "rimraf build",
     "build:babel": "babel --out-dir build src",
-    "build:release": "rollup -c && rollup -c rollup.config.minify.js"
+    "build:release": "npm run lint && rollup -c && rollup -c rollup.config.minify.js"
   },
   "author": "Pierfrancesco Soffritti <soffritti.pierfrancesco@gmail.com> (https://pierfrancescosoffritti.com/)",
   "license": "MIT",
@@ -21,6 +22,9 @@
     "@babel/register": "7.0.0",
     "chai": "4.2.0",
     "codecov.io": "0.1.6",
+    "eslint": "5.12.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0",
     "ghooks": "2.0.4",
     "mocha": "5.2.0",
     "nyc": "13.1.0",
@@ -47,7 +51,7 @@
   ],
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run lint && npm run test"
     }
   }
 }
