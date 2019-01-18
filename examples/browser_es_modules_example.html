@@ -2,15 +2,13 @@
 <html >
 	<head>
 		<meta charset="UTF-8">
-		<title>event-bus.js browser example</title>
+		<title>event-bus.js ES6 modules example</title>
 	</head>
 
 	<body>
-        <script src='../build/event-bus.min.js'></script>
-
-        <script>
-            const eventBus = new EVENT_BUS.EventBus()
-            const EventBusSingleton = EVENT_BUS.EventBusSingleton
+        <script type="module">
+            import { EventBus, EventBusSingleton } from '../build/event-bus.module.min.js'
+            const eventBus = new EventBus()
             
             eventBus.subscribe("event", arg => console.log(arg))
             eventBus.publish("event", "message")

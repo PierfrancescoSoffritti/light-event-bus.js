@@ -6,7 +6,7 @@ export default {
 	output: [
 		{
 			format: 'umd',
-			name: 'EVENTBUS',
+			name: 'EVENT_BUS',
 			file: 'build/event-bus.js',
 			indent: '\t'
 		},

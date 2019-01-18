@@ -1,0 +1,4 @@
+/build/
+/examples/
+/rollup.config.js
+/rollup.config.minify.js

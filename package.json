@@ -1,5 +1,5 @@
 {
-  "name": "event-bus.js",
+  "name": "event-bus",
   "version": "0.0.0-development",
   "description": "Event bus module for node and the browser.",
   "main": "build/index.js",
@@ -34,10 +34,19 @@
     "rollup-plugin-babel-minify": "7.0.0",
     "sinon": "7.2.2"
   },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint && npm run test"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/PierfrancescoSoffritti/event-bus.git"
   },
+  "bugs": {
+    "url": "https://github.com/PierfrancescoSoffritti/event-bus.js/issues"
+  },
+  "homepage": "https://github.com/PierfrancescoSoffritti/event-bus.js#readme",
   "keywords": [
     "eventbus",
     "event-bus",
@@ -48,10 +57,5 @@
     "build",
     "README.md",
     "LICENSE"
-  ],
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run lint && npm run test"
-    }
-  }
+  ]
 }

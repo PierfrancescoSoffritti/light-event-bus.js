@@ -7,8 +7,13 @@ export default {
 	output: [
 		{
 			format: 'umd',
-			name: 'EVENTBUS',
+			name: 'EVENT_BUS',
 			file: 'build/event-bus.min.js',
+			indent: '\t'
+		},
+		{
+			format: 'es',
+			file: 'build/event-bus.module.min.js',
 			indent: '\t'
 		}
 	]
