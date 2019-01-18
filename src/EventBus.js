@@ -5,7 +5,7 @@ function EventBus() {
 
   this.subscribe = function subscribeCallbackToEvent(eventType, callback) {
     const id = uuidv4();
-    if (!subscriptions[eventType]) subscriptions[eventType] = { }; 
+    if (!subscriptions[eventType]) subscriptions[eventType] = { };
     subscriptions[eventType][id] = callback;
     return {
       unsubscribe: function unsub() {
