@@ -7,6 +7,6 @@ before_script:
  - npm prune
 script:
  - npm run test
- - npm run build
+ - npm run build:release
 after_success:
   - npm run report-coverage

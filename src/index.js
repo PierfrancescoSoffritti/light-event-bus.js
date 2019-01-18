@@ -1,5 +1,4 @@
-import EventBus from './EventBus'
+import _EventBus from './EventBus'
 
-const EventBusSingleton = new EventBus()
-
-module.exports = { EventBus, EventBusSingleton }
+export const EventBus = _EventBus
+export const EventBusSingleton = new _EventBus()

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Example</title> 		
+	</head>
+
+	<body>
+        <script src='../build/event-bus.js'></script>
+        <script>
+            const bus = new EVENTBUS.EventBus()
+            bus.subscribe("event", arg => console.log(arg))
+            bus.publish("event", "message")
+        </script>
+	</body>
+</html>

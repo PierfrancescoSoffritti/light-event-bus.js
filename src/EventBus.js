@@ -1,4 +1,4 @@
-import uuidv4 from 'uuid/v4'
+import uuidv4 from './UuidGenerator'
 
 function EventBus() {
     const subscriptions = { }
@@ -27,4 +27,4 @@ function EventBus() {
     }
 }
 
-module.exports = EventBus
+export default EventBus
