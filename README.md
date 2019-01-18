@@ -2,22 +2,22 @@
 
 [![Build Status](https://travis-ci.com/PierfrancescoSoffritti/event-bus.svg?branch=master)](https://travis-ci.com/PierfrancescoSoffritti/event-bus) [![codecov](https://codecov.io/gh/PierfrancescoSoffritti/event-bus/branch/master/graph/badge.svg)](https://codecov.io/gh/PierfrancescoSoffritti/event-bus) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-event-bus.js a lightweight event bus for Node.js and the browser.
+event-bus.js is a lightweight event bus for Node.js and the browser.
 
 ## Table of Contents
 1. [Usage](#Usage)
-    1. [Browser](#Browser)
+    1. [Browser](#Browser-usage)
         1. [Download](#Download)
         2. [Example](#Example)
-    1. [Node.js](#Node.js)
+    1. [Node.js](#Node.js-usage)
         1. [Download](#Download)
         2. [Example](#Example)
 2. [API documentation](#API-documentation)
 
 ## Usage
-This library can be used both on Node.js and the browser.
+This library can be used both with Node.js and the browser.
 
-### Browser
+### Browser usage
 
 #### Download
 You can [download the library here](./build). For the browser there are 2 choiches: 
@@ -32,39 +32,43 @@ yarn add event-bus
 ```
 Or download `event-bus.module.min.js` and import it using ES6 imports.
 
-These files are also delivered through a CDN at these addresses:
+These two files are also delivered through a CDN at these addresses:
 1. `event-bus.min.js`: ___addurl___
 2. `event-bus.module.min.js`: ___addurl___
 
 #### Example
-1. Not using ES6
+1. Not using ES6 modules
 ```html
 <script src='../build/event-bus.min.js'></script>
 
 <script>
   const eventBus = new EVENT_BUS.EventBus()
             
-  eventBus.subscribe("event", arg => console.log(arg))
-  eventBus.publish("event", "message")
+  const subscription = eventBus.subscribe('event', arg => console.log(arg))
+  eventBus.publish('event', 'message')
+
+  subscription.unsubscribe()
 </script>
 ```
 
-1. Using ES6
+1. Using ES6 modules
 ```html
-<script type="module">
+<script type='module'>
   // if you are using npm/yarn
   import { EventBus } from 'event-bus'
-  // if you have manually downloaded the file
+  // if you have downloaded the file manually
   import { EventBus } from '../build/event-bus.module.min.js'
 
   const eventBus = new EventBus()
 
-  eventBus.subscribe("event", arg => console.log(arg))
-  eventBus.publish("event", "message")
+  const subscription = eventBus.subscribe('event', arg => console.log(arg))
+  eventBus.publish('event', 'message')
+
+  subscription.unsubscribe()
 </script>
 ```
 
-### Node.js
+### Node.js usage
 
 #### Download
 Run
@@ -80,8 +84,11 @@ yarn add event-bus
 const { EventBus } = require('event-bus')
 
 const eventBus = new EventBus()
-eventBus.subscribe("event", arg => console.log(arg))
-eventBus.publish("event", "message")
+
+const subscription = eventBus.subscribe('event', arg => console.log(arg))
+eventBus.publish('event', 'message')
+
+subscription.unsubscribe()
 ```
 
 ## API documentation
@@ -94,7 +101,7 @@ eventBus.publish("event", "message")
 2. [EventBusSingleton](#EventBusSingleton)
 
 ### EventBus
-The `EventBus` constructor can be access through the main object exposed by this library.
+The `EventBus` constructor can be accessed through the main object exposed by this library.
 
 If you are using Node.js:
 ```javascript
@@ -120,19 +127,19 @@ Call `subscribe` when you want to start listening for an event.
 
 Example:
 ```javascript
-eventBus.subscribe("event", arg => console.log(arg))
+eventBus.subscribe('event', arg => console.log(arg))
 ```
 - `eventType` can be an object of any type. Strings are recomended.
 - `callback` must be a function. This function can have 0 or 1 argument.
 
 #### Unsubscribe
-The `subscribe` function returns an object that exposes an `unsubscribe` function.
+`subscribe` returns an object that exposes an `unsubscribe` method.
 
 Call `unsubscribe` to cancel the current subscription.
 
 Example:
 ```javascript
-const subscription = eventBus.subscribe("event", arg => console.log(arg))
+const subscription = eventBus.subscribe('event', arg => console.log(arg))
 
 // To cancel the subscription
 subscription.unsubscribe()
@@ -147,13 +154,15 @@ Call `publish` when you want to publish an event on the event bus.
 
 Example:
 ```javascript
-eventBus.publish("event", "message")
+eventBus.publish('event', 'message')
 ```
 - `eventType` can be an object of any type. Strings are recomended.
-- `argument` will be passed to all the listeners for the event when they are called. It can be of any type.
+- `argument` is optional. It will be passed to all the listeners for the event. It can be of any type.
+
+In the case of this examples, only subscribers of the event `'event'` will be called, with the string `'mesage'` as argument.
 
 ### EventBusSingleton
-Often you will need just one instance of `EventBus` across your entire app, a singleton. The main object of this library already exposes a singleton, so that you don't have to create your own.
+Often a single instance of `EventBus` is needed across an entire application, a singleton. The main object of this library already exposes a singleton, so that you don't have to create your own.
 
 You can access the `EventBusSingleton` in the following ways: 
 
