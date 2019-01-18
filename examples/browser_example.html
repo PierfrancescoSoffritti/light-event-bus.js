@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Example</title> 		
+	</head>
+
+	<body>
+        <script src='../build/event-bus.js'></script>
+
+        <script>
+            const eventBus = new EVENTBUS.EventBus()
+            const EventBusSingleton = EVENTBUS.EventBusSingleton
+            
+            eventBus.subscribe("event", arg => console.log(arg))
+            eventBus.publish("event", "message")
+
+            EventBusSingleton.subscribe("event", arg => console.log(arg))
+            EventBusSingleton.publish("event", "message to singleton")
+        </script>
+	</body>
+</html>
