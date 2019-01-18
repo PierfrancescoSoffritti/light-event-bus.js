@@ -1,6 +1,7 @@
 # light-event-bus.js
 
-[![Build Status](https://travis-ci.org/PierfrancescoSoffritti/light-event-bus.js.svg?branch=master)](https://travis-ci.org/PierfrancescoSoffritti/light-event-bus.js) [![codecov](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus/branch/master/graph/badge.svg)](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![](https://img.shields.io/npm/v/light-event-bus.svg?colorB=g)
+[![Build Status](https://travis-ci.org/PierfrancescoSoffritti/light-event-bus.js.svg?branch=master)](https://travis-ci.org/PierfrancescoSoffritti/light-event-bus.js) [![codecov](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus.js/branch/master/graph/badge.svg)](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus.js) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 light-event-bus.js is a lightweight event bus for Node.js and the browser.
 
