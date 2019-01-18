@@ -1,6 +1,6 @@
 {
   "name": "light-event-bus",
-  "version": "0.0.1-development",
+  "version": "0.0.2-development",
   "description": "Lightweight event bus for node and the browser.",
   "main": "build/index.js",
   "scripts": {
@@ -55,8 +55,8 @@
     "pubsub"
   ],
   "files": [
-    "build/event-bus.min.js",
-    "build/event-bus.module.min.js",
+    "build/light-event-bus.min.js",
+    "build/light-event-bus.module.min.js",
     "README.md",
     "LICENSE"
   ]
