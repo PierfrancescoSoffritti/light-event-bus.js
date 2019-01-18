@@ -31,11 +31,10 @@ or
 ```
 yarn add light-event-bus 
 ```
-Or download `light-event-bus.module.min.js` and import it using ES6 imports.
+Or download `light-event-bus.min.js` and import it using ES6 imports.
 
 These two files are also delivered through a CDN at these addresses:
-1. `light-event-bus.min.js`: [https://unpkg.com/light-event-bus@0.0.3-development/build/event-bus.min.js](https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.min.js)
-2. `light-event-bus.module.min.js`: [https://unpkg.com/light-event-bus@0.0.3-development/build/event-bus.module.min.js](https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.module.min.js)
+- `light-event-bus.min.js`: [https://unpkg.com/light-event-bus@0.0.3-development/build/event-bus.min.js](https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.min.js)
 
 #### Example - browser
 1. Not using ES6 modules
@@ -55,10 +54,7 @@ These two files are also delivered through a CDN at these addresses:
 1. Using ES6 modules
 ```html
 <script type='module'>
-  // if you are using npm/yarn
   import { EventBus } from 'light-event-bus'
-  // if you have downloaded the file manually
-  import { EventBus } from '../build/light-event-bus.module.min.js'
 
   const eventBus = new EventBus()
 

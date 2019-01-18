@@ -10,11 +10,6 @@ export default {
 			name: 'EVENT_BUS',
 			file: 'build/light-event-bus.min.js',
 			indent: '\t'
-		},
-		{
-			format: 'es',
-			file: 'build/light-event-bus.module.min.js',
-			indent: '\t'
 		}
 	]
 };

@@ -7,7 +7,7 @@
 
 	<body>
         <script type="module">
-            import { EventBus, EventBusSingleton } from '../build/light-event-bus.module.min.js'
+            import { EventBus, EventBusSingleton } from '../build/light-event-bus.min.js'
             const eventBus = new EventBus()
             
             eventBus.subscribe("event", arg => console.log(arg))
