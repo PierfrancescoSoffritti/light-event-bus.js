@@ -1,8 +1,8 @@
 {
   "name": "light-event-bus",
-  "version": "0.0.2-development",
+  "version": "0.0.3-development",
   "description": "Lightweight event bus for node and the browser.",
-  "main": "build/index.js",
+  "main": "build/light-event-bus.min.js",
   "scripts": {
     "lint": "eslint src tests",
     "test": "nyc --reporter=html --reporter=text mocha ./tests/*_test.js --compilers js:@babel/register",
