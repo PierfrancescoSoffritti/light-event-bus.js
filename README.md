@@ -1,6 +1,6 @@
 # light-event-bus.js
 
-[![Build Status](https://travis-ci.com/PierfrancescoSoffritti/light-event-bus.svg?branch=master)](https://travis-ci.com/PierfrancescoSoffritti/light-event-bus) [![codecov](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus/branch/master/graph/badge.svg)](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/PierfrancescoSoffritti/light-event-bus.js.svg?branch=master)](https://travis-ci.org/PierfrancescoSoffritti/light-event-bus.js) [![codecov](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus/branch/master/graph/badge.svg)](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 light-event-bus.js is a lightweight event bus for Node.js and the browser.
 
@@ -33,8 +33,8 @@ yarn add light-event-bus
 Or download `light-event-bus.module.min.js` and import it using ES6 imports.
 
 These two files are also delivered through a CDN at these addresses:
-1. `light-event-bus.min.js`: ___addurl___
-2. `light-event-bus.module.min.js`: ___addurl___
+1. `light-event-bus.min.js`: [https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.min.js](https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.min.js)
+2. `light-event-bus.module.min.js`: [https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.min.js](https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.module.min.js)
 
 #### Example - browser
 1. Not using ES6 modules
