@@ -9,7 +9,7 @@ event-bus.js is a lightweight event bus for Node.js and the browser.
     1. [Browser](#Browser-usage)
         1. [Download](#Download---browser)
         2. [Example](#Example---browser)
-    1. [Node.js](#Node.js-usage)
+    1. [Node.js](#Nodejs-usage)
         1. [Download](#Download---node)
         2. [Example](#Example---node)
 2. [API documentation](#API-documentation)
