@@ -34,7 +34,7 @@ Or download `light-event-bus.module.min.js` and import it using ES6 imports.
 
 These two files are also delivered through a CDN at these addresses:
 1. `light-event-bus.min.js`: [https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.min.js](https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.min.js)
-2. `light-event-bus.module.min.js`: [https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.min.js](https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.module.min.js)
+2. `light-event-bus.module.min.js`: [https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.module.min.js](https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.module.min.js)
 
 #### Example - browser
 1. Not using ES6 modules
