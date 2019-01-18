@@ -2,12 +2,12 @@
 <html >
 	<head>
 		<meta charset="UTF-8">
-		<title>event-bus.js ES6 modules example</title>
+		<title>light-event-bus.js ES6 modules example</title>
 	</head>
 
 	<body>
         <script type="module">
-            import { EventBus, EventBusSingleton } from '../build/event-bus.module.min.js'
+            import { EventBus, EventBusSingleton } from '../build/light-event-bus.module.min.js'
             const eventBus = new EventBus()
             
             eventBus.subscribe("event", arg => console.log(arg))

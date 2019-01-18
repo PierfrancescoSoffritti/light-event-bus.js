@@ -1,8 +1,8 @@
-# event-bus.js
+# light-event-bus.js
 
-[![Build Status](https://travis-ci.com/PierfrancescoSoffritti/event-bus.svg?branch=master)](https://travis-ci.com/PierfrancescoSoffritti/event-bus) [![codecov](https://codecov.io/gh/PierfrancescoSoffritti/event-bus/branch/master/graph/badge.svg)](https://codecov.io/gh/PierfrancescoSoffritti/event-bus) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.com/PierfrancescoSoffritti/light-event-bus.svg?branch=master)](https://travis-ci.com/PierfrancescoSoffritti/light-event-bus) [![codecov](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus/branch/master/graph/badge.svg)](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-event-bus.js is a lightweight event bus for Node.js and the browser.
+light-event-bus.js is a lightweight event bus for Node.js and the browser.
 
 ## Table of Contents
 1. [Usage](#Usage)
@@ -21,25 +21,25 @@ This library can be used both with Node.js and the browser.
 
 #### Download - browser
 You can [download the library here](./build). For the browser there are 2 choiches: 
-1. If you are not using ES6 modules: download `event-bus.min.js` and import it in your app using the `<script>` tag.
+1. If you are not using ES6 modules: download `light-event-bus.min.js` and import it in your app using the `<script>` tag.
 2. If you are using ES6 modules: run 
 ```
-npm install event-bus 
+npm install light-event-bus 
 ```
 or
 ```
-yarn add event-bus 
+yarn add light-event-bus 
 ```
-Or download `event-bus.module.min.js` and import it using ES6 imports.
+Or download `light-event-bus.module.min.js` and import it using ES6 imports.
 
 These two files are also delivered through a CDN at these addresses:
-1. `event-bus.min.js`: ___addurl___
-2. `event-bus.module.min.js`: ___addurl___
+1. `light-event-bus.min.js`: ___addurl___
+2. `light-event-bus.module.min.js`: ___addurl___
 
 #### Example - browser
 1. Not using ES6 modules
 ```html
-<script src='../build/event-bus.min.js'></script>
+<script src='../build/light-event-bus.min.js'></script>
 
 <script>
   const eventBus = new EVENT_BUS.EventBus()
@@ -55,9 +55,9 @@ These two files are also delivered through a CDN at these addresses:
 ```html
 <script type='module'>
   // if you are using npm/yarn
-  import { EventBus } from 'event-bus'
+  import { EventBus } from 'light-event-bus'
   // if you have downloaded the file manually
-  import { EventBus } from '../build/event-bus.module.min.js'
+  import { EventBus } from '../build/light-event-bus.module.min.js'
 
   const eventBus = new EventBus()
 
@@ -73,15 +73,15 @@ These two files are also delivered through a CDN at these addresses:
 #### Download - node
 Run
 ```
-npm install event-bus 
+npm install light-event-bus 
 ```
 or
 ```
-yarn add event-bus 
+yarn add light-event-bus 
 ```
 #### Example - node
 ```javascript
-const { EventBus } = require('event-bus')
+const { EventBus } = require('light-event-bus')
 
 const eventBus = new EventBus()
 
@@ -105,12 +105,12 @@ The `EventBus` constructor can be accessed through the main object exposed by th
 
 If you are using Node.js:
 ```javascript
-const { EventBus } = require('event-bus')
+const { EventBus } = require('light-event-bus')
 ```
 
 If you are using ES6 imports:
 ```javascript
-import { EventBus } from 'event-bus'
+import { EventBus } from 'light-event-bus'
 ```
 
 If you are using `<script>`:
@@ -168,12 +168,12 @@ You can access the `EventBusSingleton` in the following ways:
 
 If you are using Node.js:
 ```javascript
-const { EventBusSingleton } = require('event-bus')
+const { EventBusSingleton } = require('light-event-bus')
 ```
 
 If you are using ES6 imports:
 ```javascript
-import { EventBusSingleton } from 'event-bus'
+import { EventBusSingleton } from 'light-event-bus'
 ```
 
 If you are using `<script>`:

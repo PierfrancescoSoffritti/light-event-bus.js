@@ -7,12 +7,12 @@ export default {
 		{
 			format: 'umd',
 			name: 'EVENT_BUS',
-			file: 'build/event-bus.js',
+			file: 'build/light-event-bus.js',
 			indent: '\t'
 		},
 		{
 			format: 'es',
-			file: 'build/event-bus.module.js',
+			file: 'build/light-event-bus.module.js',
 			indent: '\t'
 		}
 	]

@@ -1,7 +1,7 @@
 {
-  "name": "event-bus",
+  "name": "light-event-bus",
   "version": "0.0.0-development",
-  "description": "Event bus module for node and the browser.",
+  "description": "Lightweight event bus for node and the browser.",
   "main": "build/index.js",
   "scripts": {
     "lint": "eslint src tests",
@@ -41,20 +41,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PierfrancescoSoffritti/event-bus.git"
+    "url": "https://github.com/PierfrancescoSoffritti/light-event-bus.js.git"
   },
   "bugs": {
-    "url": "https://github.com/PierfrancescoSoffritti/event-bus.js/issues"
+    "url": "https://github.com/PierfrancescoSoffritti/light-event-bus.js/issues"
   },
-  "homepage": "https://github.com/PierfrancescoSoffritti/event-bus.js#readme",
+  "homepage": "https://github.com/PierfrancescoSoffritti/light-event-bus.js#readme",
   "keywords": [
     "eventbus",
     "event-bus",
     "event",
-    "bus"
+    "bus",
+    "pubsub"
   ],
   "files": [
-    "build",
+    "build/event-bus.min.js",
+    "build/event-bus.module.min.js",
     "README.md",
     "LICENSE"
   ]
