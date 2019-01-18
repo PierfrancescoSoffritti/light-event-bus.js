@@ -7,11 +7,11 @@ event-bus.js is a lightweight event bus for Node.js and the browser.
 ## Table of Contents
 1. [Usage](#Usage)
     1. [Browser](#Browser-usage)
-        1. [Download](#Download)
-        2. [Example](#Example)
+        1. [Download](#Download---browser)
+        2. [Example](#Example---browser)
     1. [Node.js](#Node.js-usage)
-        1. [Download](#Download)
-        2. [Example](#Example)
+        1. [Download](#Download---node)
+        2. [Example](#Example---node)
 2. [API documentation](#API-documentation)
 
 ## Usage
@@ -19,7 +19,7 @@ This library can be used both with Node.js and the browser.
 
 ### Browser usage
 
-#### Download
+#### Download - browser
 You can [download the library here](./build). For the browser there are 2 choiches: 
 1. If you are not using ES6 modules: download `event-bus.min.js` and import it in your app using the `<script>` tag.
 2. If you are using ES6 modules: run 
@@ -36,7 +36,7 @@ These two files are also delivered through a CDN at these addresses:
 1. `event-bus.min.js`: ___addurl___
 2. `event-bus.module.min.js`: ___addurl___
 
-#### Example
+#### Example - browser
 1. Not using ES6 modules
 ```html
 <script src='../build/event-bus.min.js'></script>
@@ -70,7 +70,7 @@ These two files are also delivered through a CDN at these addresses:
 
 ### Node.js usage
 
-#### Download
+#### Download - node
 Run
 ```
 npm install event-bus 
@@ -79,7 +79,7 @@ or
 ```
 yarn add event-bus 
 ```
-#### Example
+#### Example - node
 ```javascript
 const { EventBus } = require('event-bus')
 
