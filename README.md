@@ -25,8 +25,7 @@ You can [download the library here](./build). For the browser there are 2 option
 1. Download `light-event-bus.min.js` [here](./build/light-event-bus.min.js) and import it in your app using the `<script>` tag.
 2. If you are using ES modules, download the library ([here](./build/light-event-bus.min.js) or through [NPM](https://www.npmjs.com/package/light-event-bus)) and import it using ES6 imports.
 
-This file is also delivered through a CDN at this address:
-- `light-event-bus.min.js`: [https://unpkg.com/light-event-bus@0.0.3-development/build/event-bus.min.js](https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.min.js)
+This file is also delivered through a CDN at [this address](https://unpkg.com/light-event-bus@1.0.0/build/light-event-bus.min.js).
 
 #### Example - browser
 1. Importing with `<script>` tag
