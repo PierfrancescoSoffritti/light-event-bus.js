@@ -1,6 +1,6 @@
 # light-event-bus.js
 
-![](https://img.shields.io/npm/v/light-event-bus.svg?colorB=g)
+[![](https://img.shields.io/npm/v/light-event-bus.svg?colorB=g)](https://www.npmjs.com/package/light-event-bus)
 [![Build Status](https://travis-ci.org/PierfrancescoSoffritti/light-event-bus.js.svg?branch=master)](https://travis-ci.org/PierfrancescoSoffritti/light-event-bus.js) [![codecov](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus.js/branch/master/graph/badge.svg)](https://codecov.io/gh/PierfrancescoSoffritti/light-event-bus.js) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 light-event-bus.js is a lightweight event bus for Node.js and the browser.
@@ -21,23 +21,15 @@ This library can be used both with Node.js and the browser.
 ### Browser usage
 
 #### Download - browser
-You can [download the library here](./build). For the browser there are 2 choiches: 
-1. If you are not using ES6 modules: download `light-event-bus.min.js` and import it in your app using the `<script>` tag.
-2. If you are using ES6 modules: run 
-```
-npm install light-event-bus 
-```
-or
-```
-yarn add light-event-bus 
-```
-Or download `light-event-bus.min.js` and import it using ES6 imports.
+You can [download the library here](./build). For the browser there are 2 options: 
+1. Download `light-event-bus.min.js` [here](./build/light-event-bus.min.js) and import it in your app using the `<script>` tag.
+2. If you are using ES modules, download the library ([here](./build) or through [NPM](https://www.npmjs.com/package/light-event-bus)) and import it using ES6 imports.
 
-These two files are also delivered through a CDN at these addresses:
+This file is also delivered through a CDN at this address:
 - `light-event-bus.min.js`: [https://unpkg.com/light-event-bus@0.0.3-development/build/event-bus.min.js](https://unpkg.com/light-event-bus@0.0.0-development/build/event-bus.min.js)
 
 #### Example - browser
-1. Not using ES6 modules
+1. Importing with `<script>` tag
 ```html
 <script src='../build/light-event-bus.min.js'></script>
 
@@ -51,7 +43,7 @@ These two files are also delivered through a CDN at these addresses:
 </script>
 ```
 
-1. Using ES6 modules
+2. Importing ES module
 ```html
 <script type='module'>
   import { EventBus } from 'light-event-bus'
