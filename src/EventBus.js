@@ -1,16 +1,16 @@
-import uuidv4 from './UuidGenerator';
-
 function EventBus() {
   const subscriptions = { };
 
   this.subscribe = function subscribeCallbackToEvent(eventType, callback) {
-    const id = uuidv4();
+    const id = Symbol('id');
     if (!subscriptions[eventType]) subscriptions[eventType] = { };
     subscriptions[eventType][id] = callback;
     return {
-      unsubscribe: function unsub() {
+      unsubscribe: function unsubscribe() {
         delete subscriptions[eventType][id];
-        if (Object.keys(subscriptions[eventType]).length === 0) delete subscriptions[eventType];
+        if (Object.getOwnPropertySymbols(subscriptions[eventType]).length === 0) {
+          delete subscriptions[eventType];
+        }
       },
     };
   };
@@ -18,7 +18,8 @@ function EventBus() {
   this.publish = function publishEventWithArgs(eventType, arg) {
     if (!subscriptions[eventType]) return;
 
-    Object.keys(subscriptions[eventType]).forEach(key => subscriptions[eventType][key](arg));
+    Object.getOwnPropertySymbols(subscriptions[eventType])
+      .forEach(key => subscriptions[eventType][key](arg));
   };
 }
 

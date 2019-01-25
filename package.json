@@ -1,6 +1,6 @@
 {
   "name": "light-event-bus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight event bus for node and the browser.",
   "main": "build/light-event-bus.min.js",
   "scripts": {
