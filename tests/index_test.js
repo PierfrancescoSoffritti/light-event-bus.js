@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* global describe it */
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable func-names */

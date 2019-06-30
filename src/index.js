@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import _EventBus from './EventBus';
 
 export const EventBus = _EventBus;
